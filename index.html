@@ -16,9 +16,10 @@
             </div>
             <div class="list">
                 <div class="items-container">
-                    <input type="text" class="add-items-input" placeholder="Add an item" onkeypress="if(event.keyCode == 13){addTask()}">
+                    <input type="text" class="add-items-input" placeholder="Add an item" onkeypress="if(event.keyCode == 13){addTask()}" oninput="checkInputLength()" maxlength="36">
                     <button onclick="addTask()" class="add-items-btn">Add</button>
                 </div>
+                <span class="input-message" style="font-size: 15px; margin-left: 10px;"></span>
                 <ul class="list-container">
                 </ul>
             </div>
