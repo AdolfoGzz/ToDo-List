@@ -104,3 +104,13 @@ ul li.checked{
 ul li.checked::before{
     background-image: url(images/check-circle.png);
 }
+
+ul li span{
+    position: absolute;
+    right: 20px;
+    top: 18px;
+}
+
+ul li span:hover{
+    color: rgb(145, 108, 26);
+}
