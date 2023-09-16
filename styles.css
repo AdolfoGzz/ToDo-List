@@ -39,13 +39,11 @@ body{
     height: 50px;
 }
 
-.add-items-container{
+.items-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    border: 2px solid rgb(200, 200, 200);
-    border-radius: 10px;
+    border-radius: 30px;
     background-color: rgb(240, 240, 240);
 }
 .add-items-input{
@@ -54,22 +52,55 @@ body{
     border: none;
     outline: none;
     font-size: 18px;
-    padding: 10px;
+    padding: 5px;
+    margin: 12px;
     background-color: rgb(240, 240, 240);
 }
 .add-items-btn{
-    width: 15%;
-    height: 40px;
-    border: 1px solid rgb(200, 200, 200);
+    width: 25%;
+    height: 50px;
+    border: none;
     outline: none;
     font-size: 18px;
-    border-radius: 5px;
-    background-color: rgb(240, 240, 240);
+    border-radius: 30px;
+    background-color: rgb(30, 179, 181);
     cursor: pointer;
+    color: whitesmoke;
 }
 .add-items-btn:hover{
-    background-color: rgba(34,193,195,0.15);
+    background-color: rgb(27, 157, 159);
 }
 .add-items-btn:active{
-    background-color: rgba(34,193,195,0.2);
+    background-color: rgb(16, 95, 97);
+}
+
+ul li{
+    list-style: none;
+    font-size: 18px;
+    padding: 15px;
+    padding-left: 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-image: url(images/circle.png);
+    background-size: cover;
+    background-position: center;
+    top: 15px;
+    left: 8px;
+}
+ul li.checked{
+    color: rgb(145, 108, 26);
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(images/check-circle.png);
 }

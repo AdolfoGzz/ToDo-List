@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To do List</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
 <div class="main">
@@ -15,10 +15,15 @@
                 <h1 class="title-text">To-Do List</h1>
             </div>
             <div class="list">
-                <div class="add-items-container">
-                    <input type="text" class="add-items-input" placeholder="Add an item">
-                    <button class="add-items-btn">Add</button>
+                <div class="items-container">
+                    <input type="text" class="add-items-input" placeholder="Add an item" onkeypress="if(event.keyCode == 13){addTask()}">
+                    <button onclick="addTask()" class="add-items-btn">Add</button>
                 </div>
+                <ul class="list-container">
+                    <!-- <li class="checked">Task 1</li>
+                    <li>Task 2</li>
+                    <li>Task 3</li> -->
+                </ul>
             </div>
         </div>
 </div>
